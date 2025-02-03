@@ -1,0 +1,17 @@
+# Activer la réécriture d'URL
+RewriteEngine On
+
+# Rediriger index.php vers /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ / [L,R=301]
+
+# Masquer les extensions .php et rediriger proprement
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Éviter la redirection 301 pour les requêtes avec .php
+# Ne redirige que les requêtes GET pour éviter les conflits avec POST
+RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{THE_REQUEST} \s([^.]+)\.php[\s?]
+RewriteRule ^ %1 [R=301,L]

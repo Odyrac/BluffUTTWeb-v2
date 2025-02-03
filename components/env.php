@@ -1,0 +1,3 @@
+<?php
+
+$passwordGlobal = "admin";
