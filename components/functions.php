@@ -137,8 +137,8 @@ function getStatisticsType()
     $statisticsType = array(
         array('type' => 'evolAccountsParty', 'name' => 'Évolution comptes par soirée'),
         array('type' => 'evolPointsParty', 'name' => 'Évolution points par soirée'),
-        /*array('type' => 'moneyParty', 'name' => 'Argent gagné par soirée'),
-        array('type' => 'pointsParty', 'name' => 'Points gagnés par soirée')*/
+        array('type' => 'moneyParty', 'name' => 'Argent gagné par soirée'),
+        array('type' => 'pointsParty', 'name' => 'Points gagnés par soirée')
     );
     return $statisticsType;
 }

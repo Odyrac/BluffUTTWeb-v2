@@ -148,8 +148,6 @@
         $name = getName($player['firstname'], $player['lastname']);
         $money = $player['money'];
         $points = $player['points'];
-        $lastGain = $player['lastGain'];
-        $isPlaying = $player['isPlaying'];
         $color = getRandomColor();
         $presenceCount = $player['presenceCount'];
 
@@ -161,8 +159,14 @@
             'borderColor' => $color,
             'fill' => false,
           ];
+
+          if ($statisticsType['type'] == $allStatisticsType[2]['type'] || $statisticsType['type'] == $allStatisticsType[3]['type']) {
+            $playerData[$id]['showLine'] = false;
+            $playerData[$id]['pointRadius'] = 7;
+          }
         }
 
+        // On met à jour le presenceCount
         if ($playerData[$id]['presenceCount'] < $presenceCount || $playerData[$id]['presenceCount'] == null) {
           $playerData[$id]['presenceCount'] = $presenceCount;
         }
@@ -183,6 +187,28 @@
           }
 
           $playerData[$id]['data'][] = $points;
+        } else if ($statisticsType['type'] == $allStatisticsType[2]['type']) {
+
+          // Remplir les valeurs manquantes avec 0
+          while (count($playerData[$id]['data']) < count($labels) - 1) {
+            $playerData[$id]['data'][] = 0;
+          }
+
+          $lastGain = $playerData[$id]['lastGain'] ?? 10000;
+          $moneyWin = $money - $lastGain;
+          $playerData[$id]['data'][] = $moneyWin;
+          $playerData[$id]['lastGain'] = $money;
+        } else if ($statisticsType['type'] == $allStatisticsType[3]['type']) {
+
+          // Remplir les valeurs manquantes avec 0
+          while (count($playerData[$id]['data']) < count($labels) - 1) {
+            $playerData[$id]['data'][] = 0;
+          }
+
+          $lastGain = $playerData[$id]['lastGain'] ?? 0;
+          $pointsWin = $points - $lastGain;
+          $playerData[$id]['data'][] = $pointsWin;
+          $playerData[$id]['lastGain'] = $points;
         }
       }
     }
@@ -194,7 +220,7 @@
       }
     }
 
-    if ($statisticsType['type'] == $allStatisticsType[1]['type']) {
+    if ($statisticsType['type'] == $allStatisticsType[1]['type'] || $statisticsType['type'] == $allStatisticsType[3]['type']) {
       // On enlève les joueurs qui n'ont que des points à 0
       foreach ($playerData as $id => $player) {
         if (array_sum($playerData[$id]['data']) == 0) {
