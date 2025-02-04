@@ -5,3 +5,4 @@
 <script src="./assets/libs/apexcharts/dist/apexcharts.min.js"></script>
 <script src="./assets/libs/simplebar/dist/simplebar.js"></script>
 <script src="./assets/js/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

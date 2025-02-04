@@ -25,20 +25,20 @@
                         <span class="hide-menu">Classement</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="./statistics.php" aria-expanded="false">
+                <li class="sidebar-item <?php if ($page == 'champions') echo 'selected'; ?>">
+                    <a class="sidebar-link <?php if ($page == 'champions') echo 'active'; ?>" href="./champions.php" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-trophy"></i>
+                        </span>
+                        <span class="hide-menu">Champions</span>
+                    </a>
+                </li>
+                <li class="sidebar-item <?php if ($page == 'statistics') echo 'selected'; ?>">
+                    <a class="sidebar-link <?php if ($page == 'statistics') echo 'active'; ?>" href="./statistics.php" aria-expanded="false">
                         <span>
                             <i class="ti ti-chart-dots"></i>
                         </span>
                         <span class="hide-menu">Statistiques</span>
-                    </a>
-                </li>
-                <li class="sidebar-item <?php if ($page == 'help') echo 'selected'; ?>">
-                    <a class="sidebar-link <?php if ($page == 'help') echo 'active'; ?>" href="./help.php" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-help"></i>
-                        </span>
-                        <span class="hide-menu">Aide</span>
                     </a>
                 </li>
                 <!--<li class="sidebar-item">
@@ -51,7 +51,15 @@
                 </li>-->
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                    <span class="hide-menu">Admin</span>
+                    <span class="hide-menu">Divers</span>
+                </li>
+                <li class="sidebar-item <?php if ($page == 'help') echo 'selected'; ?>">
+                    <a class="sidebar-link <?php if ($page == 'help') echo 'active'; ?>" href="./help.php" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-help"></i>
+                        </span>
+                        <span class="hide-menu">Aide</span>
+                    </a>
                 </li>
                 <li class="sidebar-item <?php if ($page == 'panel') echo 'selected'; ?>">
                     <a class="sidebar-link <?php if ($page == 'panel') echo 'active'; ?>" href="./panel.php" aria-expanded="false">
@@ -61,14 +69,6 @@
                         <span class="hide-menu">Panel</span>
                     </a>
                 </li>
-                <!--<li class="sidebar-item">
-                    <a class="sidebar-link" href="./archives.php" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-folder"></i>
-                        </span>
-                        <span class="hide-menu">Archives</span>
-                    </a>
-                </li>-->
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

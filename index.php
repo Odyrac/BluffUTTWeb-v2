@@ -21,7 +21,10 @@
       <?php
 
       $semester = getSemester();
-      $players = getPlayers();
+      if (isset($_GET['semester']) && isValidSemester($_GET['semester'])) {
+        $semester = $_GET['semester'];
+      }
+      $players = getPlayers(null, $semester);
 
       ?>
 
@@ -40,22 +43,24 @@
                 }*/
                 ?>
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                  <h5 class="card-title fw-semibold">Classement soirées <?php echo $semester; ?></h5>
+                  <h5 class="card-title fw-semibold">Classement soirées</h5>
 
-                  <div class="dropdown d-flex flex-column align-items-center">
-                    <div class="dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
-                      <div class="d-flex flex-column align-items-center">
-                        <i class="ti ti-calendar-time fs-6"></i>
-                      </div>
-                    </div>
+                  <div class="dropdown">
+                    <button class="btn btn-link text-decoration-none text-muted dropdown-toggle-split d-flex align-items-center gap-1 text-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Semestre <?php echo $semester; ?>
+                      <i class="ti ti-chevron-down"></i>
+                    </button>
 
                     <ul class="dropdown-menu pt-0 pb-0">
-                      <li>
-                        <a class="dropdown-item" href="./api/null.php">
-                          <i class="ti ti-check me-2"></i>
-                          Semestre P25
-                        </a>
-                      </li>
+                      <?php
+                      $semesters = getSemesters();
+                      $semesters = array_reverse($semesters);
+
+                      foreach ($semesters as $sem) {
+                        $isCurrentSemester = ($sem === $semester);
+                        echo '<li><a class="dropdown-item" href="?semester=' . $sem . '">' . ($isCurrentSemester ? '<i class="ti ti-check me-2"></i>' : '') . 'Semestre ' . $sem . '</a></li>';
+                      }
+                      ?>
                     </ul>
                   </div>
                 </div>
@@ -107,12 +112,8 @@
 
                           $indice++;
 
-                          $money = $player['money'];
+                          $money = getMoney($player['money']);
                           $name = getName($player['firstname'], $player['lastname']);
-
-                          if ($money >= 1000) {
-                            $money = number_format($money, 0, ',', ',');
-                          }
                       ?>
 
                           <tr>
@@ -126,7 +127,7 @@
                                                             }
                                                             ?>
                               </h6>
-                              <span class="fw-normal mobile-affichage" style="display: none;"><?php echo $money; ?>$</span>
+                              <span class="fw-normal mobile-affichage" style="display: none;"><?php echo $money; ?></span>
                             </td>
                             <td class="border-bottom-0">
                               <div class="d-flex align-items-center gap-2">
@@ -134,7 +135,7 @@
                               </div>
                             </td>
                             <td class="border-bottom-0 ordi-affichage">
-                              <p class="mb-0 fw-normal"><?php echo $money; ?>$</p>
+                              <p class="mb-0 fw-normal"><?php echo $money; ?></p>
                             </td>
                           </tr>
                       <?php

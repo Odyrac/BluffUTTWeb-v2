@@ -40,7 +40,7 @@ foreach ($_POST as $key => $value) {
     }
 }
 
-$json = json_encode($players, JSON_PRETTY_PRINT);
+$json = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
 $semester = getSemester('../');
 

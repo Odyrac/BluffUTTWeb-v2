@@ -73,7 +73,7 @@
                   <form action="./api/addPlayer.php" method="post">
                     <div class="mb-3">
                       <label for="firstname" class="form-label">Prénom</label>
-                      <input type="text" class="form-control" id="firstname" name="firstname" required>
+                      <input type="text" class="form-control" id="firstname" name="firstname" required autofocus>
                     </div>
                     <div class="mb-3">
                       <label for="lastname" class="form-label">Nom</label>
@@ -106,6 +106,10 @@
 
                 if (isset($_GET['success']) && $_GET['success'] == 'closeParty') {
                   echo '<div class="alert alert-success mt-4" role="alert">La soirée a été fermée avec succès !</div>';
+                };
+
+                if (isset($_GET['success']) && $_GET['success'] == 'closeSemester') {
+                  echo '<div class="alert alert-success mt-4" role="alert">Le semestre a été fermé avec succès !</div>';
                 }; ?>
 
                 <div class="table-responsive">
@@ -160,7 +164,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 d-flex align-items-stretch fixed-bottom" style="left: auto; right: 0;">
+          <div class="col-lg-6 d-flex align-items-stretch fixed-bottom ps-0 pe-0 pe-lg-3" style="left: auto; right: 0;">
             <div class="card w-100 mb-0 mb-lg-4">
               <div class="card-body p-4">
                 <div class="d-flex justify-content-around">
@@ -253,6 +257,30 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="closeSemester" tabindex="-1" aria-labelledby="closeSemesterLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form method="post" action="./api/closeSemester.php">
+          <div class="modal-header">
+            <h5 class="modal-title" id="closeSemesterLabel">Fermer un semestre</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Êtes-vous sûr de vouloir fermer le semestre ?
+            <input class="form-control mt-3" type="text" name="newSemester" placeholder="Nom du nouveau semestre à créer (ex : A25)" required>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn btn-primary">Confirmer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {

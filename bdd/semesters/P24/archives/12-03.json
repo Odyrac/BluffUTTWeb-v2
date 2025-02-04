@@ -1,0 +1,122 @@
+[
+    {
+        "firstname": "louis",
+        "lastname": "halley",
+        "money": 10740,
+        "points": 25,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 0
+    },
+    {
+        "firstname": "engus",
+        "lastname": "lucat",
+        "money": 10660,
+        "points": 18,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 1
+    },
+    {
+        "firstname": "bastien",
+        "lastname": "dehêtre",
+        "money": 10500,
+        "points": 15,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 2
+    },
+    {
+        "firstname": "william",
+        "lastname": "vernet",
+        "money": 10410,
+        "points": 12,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 3
+    },
+    {
+        "firstname": "yann",
+        "lastname": "coubel",
+        "money": 10355,
+        "points": 10,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 4
+    },
+    {
+        "firstname": "zhelin",
+        "lastname": "yang",
+        "money": 10300,
+        "points": 8,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 5
+    },
+    {
+        "firstname": "axel",
+        "lastname": "meunier",
+        "money": 10040,
+        "points": 6,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 6
+    },
+    {
+        "firstname": "qingyang",
+        "lastname": "zhang",
+        "money": 10010,
+        "points": 4,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 7
+    },
+    {
+        "firstname": "alexis",
+        "lastname": "boulaie",
+        "money": 8000,
+        "points": 0,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 8
+    },
+    {
+        "firstname": "théo",
+        "lastname": "dugave",
+        "money": 8770,
+        "points": 0,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 9
+    }
+]

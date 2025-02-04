@@ -37,7 +37,7 @@ foreach ($playerIds as $playerId) {
     $players[$playerIndex]['rebuyCount'] += 1;
 }
 
-$json = json_encode($players, JSON_PRETTY_PRINT);
+$json = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
 $semester = getSemester('../');
 

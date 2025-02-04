@@ -7,8 +7,8 @@ if (!isset($_COOKIE['password']) || $_COOKIE['password'] != $passwordGlobal) {
     return header('Location: ../panel.php?error=auth');
 }
 
-$firstname = strtolower($_POST['firstname']);
-$lastname = strtolower($_POST['lastname']);
+$firstname = html_entity_decode(strtolower($_POST['firstname']), ENT_QUOTES, 'UTF-8');
+$lastname = html_entity_decode(strtolower($_POST['lastname']), ENT_QUOTES, 'UTF-8');
 
 $money = 10000;
 $points = 0;
@@ -47,7 +47,7 @@ $newPlayer = [
 
 $players[] = $newPlayer;
 
-$json = json_encode($players, JSON_PRETTY_PRINT);
+$json = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
 $semester = getSemester('../');
 

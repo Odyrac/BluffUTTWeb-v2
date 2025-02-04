@@ -69,10 +69,14 @@ foreach ($players as &$player) {
 
 unset($player);
 
-$json = json_encode($players, JSON_PRETTY_PRINT);
+$json = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
 $semester = getSemester('../');
 
 file_put_contents('../bdd/semesters/' . $semester . '/global.json', $json);
+
+$fileName = date('d-m') . '.json';
+
+file_put_contents('../bdd/semesters/' . $semester . '/archives/' . $fileName, $json);
 
 header('Location: ../panel.php?success=closeParty');

@@ -29,9 +29,9 @@
 
                 <h5 class="card-title fw-semibold mb-4">Explications</h5>
 
-                <p>Ce nouveau classement prend en compte des points. Pour en gagner, il faut finir parmi les meilleurs d'une soirée. En effet, comme pour la Formule 1, à chaque soirée, les 10 plus gros gagnants seront récompensés. Ce changement permet de minimiser l'impact d'une seule bonne soirée pour un joueur sur le classement semestriel !</p>
+                <p>À partir du semestre A23, la notion de "points" est introduite. Pour gagner ces points, il faut finir parmi les meilleurs d'une soirée. En effet, comme pour la Formule 1, à chaque soirée, les 10 plus gros gagnants sont récompensés. Ce changement permet de minimiser l'impact d'une seule bonne soirée pour un joueur sur le classement semestriel !</p>
 
-                <p>Pour les nouveaux, nous vous rappelons qu'au début de chaque semestre, 10,000$ vous sont attribués et ce "compte fictif" vous suit à chaque soirée. Ce système est bien conservé, mais il ne représente plus le classement prioritaire !</p>
+                <p>Pour tous les nouveaux, nous vous rappelons qu'au début de chaque semestre, 10,000$ vous sont attribués et ce "compte fictif" vous suit à chaque soirée. Ce système est bien conservé, mais il ne représente plus le classement prioritaire !</p>
 
                 <p>Voici le barème des points :</p>
 
@@ -86,7 +86,7 @@
                   </tbody>
                 </table>
 
-                <p>Les suivants ne gagnent pas de points. En cas d'égalité, le joueur ayant le plus d'argent sur son compte fictif gagne la place la plus haute.</p>
+                <p><strong>Informations : </strong><br>- Au delà de la dixième place, aucun point n'est obtenu.<br>- En cas d'égalité sur la somme d'argent rendue, le joueur étant le plus riche sur son compte fictif prend la place la plus haute.<br>- Il est possible de marquer des points à partir du moment où l'on est présent à la soirée, même si l'on finit en négatif (tant que cela reste une des 10 meilleures performances du soir).</p>
 
               </div>
             </div>

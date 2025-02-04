@@ -1,12 +1,12 @@
 [
     {
-        "firstname": "louis",
-        "lastname": "halley",
-        "money": 21005,
-        "points": 214,
+        "firstname": "william",
+        "lastname": "vernet",
+        "money": 13450,
+        "points": 127,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 14,
+        "presenceCount": 10,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 0
@@ -14,56 +14,56 @@
     {
         "firstname": "yann",
         "lastname": "coubel",
-        "money": 24120,
-        "points": 211,
+        "money": 18665,
+        "points": 135,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 14,
+        "presenceCount": 10,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 1
     },
     {
-        "firstname": "engus",
-        "lastname": "lucat",
-        "money": 10405,
-        "points": 71,
+        "firstname": "théo",
+        "lastname": "dugave",
+        "money": 7645,
+        "points": 69,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 7,
+        "presenceCount": 9,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 2
     },
     {
-        "firstname": "william",
-        "lastname": "vernet",
-        "money": 16070,
-        "points": 187,
+        "firstname": "leeloo",
+        "lastname": "balayn",
+        "money": 16210,
+        "points": 92,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 14,
+        "presenceCount": 7,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 3
     },
     {
-        "firstname": "théo",
-        "lastname": "dugave",
-        "money": 3245,
-        "points": 93,
+        "firstname": "raphaël",
+        "lastname": "very",
+        "money": 9490,
+        "points": 42,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 13,
+        "presenceCount": 5,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 4
     },
     {
-        "firstname": "kyoma",
-        "lastname": "grandjean",
-        "money": 9700,
-        "points": 15,
+        "firstname": "louise",
+        "lastname": "bazin",
+        "money": 8225,
+        "points": 8,
         "lastGain": 0,
         "isPlaying": false,
         "presenceCount": 2,
@@ -72,28 +72,52 @@
         "id": 5
     },
     {
-        "firstname": "lucie",
-        "lastname": "fritig",
-        "money": 10270,
-        "points": 12,
+        "firstname": "louis",
+        "lastname": "halley",
+        "money": 14490,
+        "points": 138,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 1,
+        "presenceCount": 10,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 6
     },
     {
-        "firstname": "nathan",
-        "lastname": "guerin",
-        "money": 9345,
-        "points": 12,
+        "firstname": "axel",
+        "lastname": "meunier",
+        "money": 4100,
+        "points": 66,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 2,
+        "presenceCount": 10,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 7
+    },
+    {
+        "firstname": "bastien",
+        "lastname": "dehêtre",
+        "money": 1860,
+        "points": 45,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 9,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 8
+    },
+    {
+        "firstname": "alexis",
+        "lastname": "boulaie",
+        "money": 1300,
+        "points": 9,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 5,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 9
     },
     {
         "firstname": "zhou",
@@ -105,7 +129,19 @@
         "presenceCount": 1,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 8
+        "id": 10
+    },
+    {
+        "firstname": "kyoma",
+        "lastname": "grandjean",
+        "money": 9700,
+        "points": 15,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 2,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 11
     },
     {
         "firstname": "martin",
@@ -117,7 +153,7 @@
         "presenceCount": 1,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 9
+        "id": 12
     },
     {
         "firstname": "nathan",
@@ -129,7 +165,7 @@
         "presenceCount": 1,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 10
+        "id": 13
     },
     {
         "firstname": "eliot",
@@ -141,7 +177,7 @@
         "presenceCount": 1,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 11
+        "id": 14
     },
     {
         "firstname": "zhelin",
@@ -153,19 +189,19 @@
         "presenceCount": 2,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 12
+        "id": 15
     },
     {
-        "firstname": "raphaël",
-        "lastname": "very",
-        "money": 10325,
-        "points": 64,
+        "firstname": "nathan",
+        "lastname": "guerin",
+        "money": 9345,
+        "points": 12,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 7,
+        "presenceCount": 2,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 13
+        "id": 16
     },
     {
         "firstname": "christian",
@@ -177,7 +213,7 @@
         "presenceCount": 1,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 14
+        "id": 17
     },
     {
         "firstname": "qingyang",
@@ -189,79 +225,7 @@
         "presenceCount": 3,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 15
-    },
-    {
-        "firstname": "louise",
-        "lastname": "bazin",
-        "money": 8420,
-        "points": 16,
-        "lastGain": 0,
-        "isPlaying": false,
-        "presenceCount": 3,
-        "rebuyCount": 0,
-        "hasAlreadyPlayed": false,
-        "id": 16
-    },
-    {
-        "firstname": "valentin",
-        "lastname": "françois",
-        "money": 8605,
-        "points": 2,
-        "lastGain": 0,
-        "isPlaying": false,
-        "presenceCount": 1,
-        "rebuyCount": 0,
-        "hasAlreadyPlayed": false,
-        "id": 17
-    },
-    {
-        "firstname": "axel",
-        "lastname": "meunier",
-        "money": -900,
-        "points": 74,
-        "lastGain": 0,
-        "isPlaying": false,
-        "presenceCount": 13,
-        "rebuyCount": 0,
-        "hasAlreadyPlayed": false,
         "id": 18
-    },
-    {
-        "firstname": "alexis",
-        "lastname": "boulaie",
-        "money": -535,
-        "points": 38,
-        "lastGain": 0,
-        "isPlaying": false,
-        "presenceCount": 8,
-        "rebuyCount": 0,
-        "hasAlreadyPlayed": false,
-        "id": 19
-    },
-    {
-        "firstname": "bastien",
-        "lastname": "dehêtre",
-        "money": -295,
-        "points": 63,
-        "lastGain": 0,
-        "isPlaying": false,
-        "presenceCount": 12,
-        "rebuyCount": 0,
-        "hasAlreadyPlayed": false,
-        "id": 20
-    },
-    {
-        "firstname": "leeloo",
-        "lastname": "balayn",
-        "money": 13900,
-        "points": 115,
-        "lastGain": 0,
-        "isPlaying": false,
-        "presenceCount": 10,
-        "rebuyCount": 0,
-        "hasAlreadyPlayed": false,
-        "id": 21
     },
     {
         "firstname": "romain",
@@ -273,6 +237,30 @@
         "presenceCount": 3,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 22
+        "id": 19
+    },
+    {
+        "firstname": "engus",
+        "lastname": "lucat",
+        "money": 8845,
+        "points": 36,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 4,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 20
+    },
+    {
+        "firstname": "lucie",
+        "lastname": "fritig",
+        "money": 10270,
+        "points": 12,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 1,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 21
     }
 ]

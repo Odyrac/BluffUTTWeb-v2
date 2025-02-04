@@ -126,19 +126,19 @@
 
           <?php
           if ($_GET['action'] == 'exitPlayers') { ?>
-            <div class="col-lg-4 d-flex align-items-stretch fixed-bottom" style="left: auto; right: 0;">
+            <div class="col-lg-4 d-flex align-items-stretch fixed-bottom ps-0 pe-0 pe-lg-3" style="left: auto; right: 0;">
               <div class="card w-100 mb-0 mb-lg-4">
                 <div class="card-body p-4">
                   <div class="d-flex justify-content-around">
 
-                    <div class="d-flex flex-column align-items-center" onclick="document.querySelector('form').submit();" style="cursor: pointer;">
-                      <i class="ti ti-check fs-4 mb-2"></i>
-                      <span class="fw-semibold">Valider</span>
-                    </div>
-
                     <div class="d-flex flex-column align-items-center" onclick="window.location.href='panel.php'" style="cursor: pointer;">
                       <i class="ti ti-x fs-4 mb-2"></i>
                       <span class="fw-semibold">Annuler</span>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center" onclick="document.querySelector('form').submit();" style="cursor: pointer;">
+                      <i class="ti ti-check fs-4 mb-2"></i>
+                      <span class="fw-semibold">Valider</span>
                     </div>
 
                   </div>
