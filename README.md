@@ -1,5 +1,9 @@
 # Bluff'UTT Web v2
 
+<p align="center">
+    <img src="https://bluffutt.hlly.fr/assets/images/logos/bluffutt.png" width="20%" alt="Logo">
+</p>
+
 ## Introduction
 
 Ce projet est une refonte de l'ancien site Bluff'UTT assurant la gestion du classement semestriel.
