@@ -153,3 +153,35 @@ function getRandomColor()
 {
     return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
 }
+
+// This function is used to write a log
+function writeLog($path = null, $message = null)
+{
+    if (!$path) {
+        $path = './';
+    }
+
+    if (!$message) {
+        return;
+    }
+
+    $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
+    $date = $date->format('d/m/Y H:i:s');
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $message = '[' . $ip . ']' . ' ' . $date . ' - ' . $message . PHP_EOL;
+
+    $maxLines = 999;
+
+    // Read the file
+    $lines = file($path . 'bdd/logs.txt');
+
+    if (!empty($lines)) {
+        // Remove the last lines if the file has more than $maxLines lines
+        if (count($lines) >= $maxLines) {
+            $lines = array_slice($lines, 0, $maxLines);
+        }
+    }
+
+    // Write the log
+    file_put_contents($path . 'bdd/logs.txt', $message . implode('', $lines));
+}

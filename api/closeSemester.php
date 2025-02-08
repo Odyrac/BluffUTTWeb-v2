@@ -30,4 +30,6 @@ $currentData = json_decode(file_get_contents('../bdd/current.json'), true);
 $currentData['currentSemester'] = $newSemester;
 file_put_contents('../bdd/current.json', json_encode($currentData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
+writeLog('../', 'Fermeture du semestre, ouverture du semestre ' . $newSemester);
+
 header('Location: ../panel.php?success=closeSemester');

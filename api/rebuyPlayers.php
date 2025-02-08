@@ -15,6 +15,8 @@ if (!isset($playerIds)) {
 
 $players = getPlayers('../');
 
+$playersName = array();
+
 foreach ($playerIds as $playerId) {
     // Trouver l'index du joueur dans le tableau
     $playerIndex = array_search($playerId, array_column($players, 'id'));
@@ -35,6 +37,8 @@ foreach ($playerIds as $playerId) {
     $players[$playerIndex]['money'] -= 1000;
     $players[$playerIndex]['lastGain'] -= 1000;
     $players[$playerIndex]['rebuyCount'] += 1;
+
+    array_push($playersName, getName($players[$playerIndex]['firstname'], $players[$playerIndex]['lastname']));
 }
 
 $json = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
@@ -42,6 +46,9 @@ $json = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 $semester = getSemester('../');
 
 file_put_contents('../bdd/semesters/' . $semester . '/global.json', $json);
+
+$playersName = implode(', ', $playersName);
+writeLog('../', 'Recave des joueurs : ' . $playersName);
 
 header('Location: ../panel.php?success=rebuyPlayers');
 

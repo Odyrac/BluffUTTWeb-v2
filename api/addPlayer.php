@@ -19,11 +19,14 @@ $lastGain = 0;
 $hasAlreadyPlayed = false;
 $rebuyCount = 0;
 
+$isPlayingString = '';
+
 if (isset($_POST['checkbox'])) {
     $money = 9000;
     $isPlaying = true;
     $presenceCount = 1;
     $lastGain = -1000;
+    $isPlayingString = ' (entrée en jeu)';
 }
 
 $players = getPlayers('../');
@@ -52,6 +55,8 @@ $json = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 $semester = getSemester('../');
 
 file_put_contents('../bdd/semesters/' . $semester . '/global.json', $json);
+
+writeLog('../', 'Ajout du joueur : ' . getName($firstname, $lastname) . $isPlayingString);
 
 header('Location: ../panel.php?success=addPlayer');
 

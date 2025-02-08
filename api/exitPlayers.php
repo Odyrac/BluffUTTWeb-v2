@@ -13,6 +13,8 @@ if (!isset($_POST)) {
 
 $players = getPlayers('../');
 
+$playersName = array();
+
 foreach ($_POST as $key => $value) {
     if ($value !== '') {
         $playerId = intval($key);
@@ -37,6 +39,8 @@ foreach ($_POST as $key => $value) {
         $players[$playerIndex]['money'] += $money;
         $players[$playerIndex]['hasAlreadyPlayed'] = true;
         $players[$playerIndex]['lastGain'] += $money;
+
+        array_push($playersName, getName($players[$playerIndex]['firstname'], $players[$playerIndex]['lastname']) . ' (' . getMoney($money) . ')');
     }
 }
 
@@ -45,5 +49,8 @@ $json = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 $semester = getSemester('../');
 
 file_put_contents('../bdd/semesters/' . $semester . '/global.json', $json);
+
+$playersName = implode(', ', $playersName);
+writeLog('../', 'Sortie des joueurs : ' . $playersName);
 
 header('Location: ../panel.php?success=exitPlayers');

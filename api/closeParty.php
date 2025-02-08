@@ -79,4 +79,6 @@ $fileName = date('d-m') . '.json';
 
 file_put_contents('../bdd/semesters/' . $semester . '/archives/' . $fileName, $json);
 
+writeLog('../', 'Fermeture de la soirée');
+
 header('Location: ../panel.php?success=closeParty');

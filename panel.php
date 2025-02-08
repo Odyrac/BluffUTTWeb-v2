@@ -88,6 +88,15 @@
                 <?php return;
                 } ?>
 
+                <?php if (isset($_GET['action']) && $_GET['action'] == 'logs') {
+                  $file = fopen("./bdd/logs.txt", "r");
+                  $logs = fread($file, filesize("./bdd/logs.txt"));
+                  fclose($file);
+                  $logs = str_replace(PHP_EOL, '<br>', $logs);
+                  echo '<pre>' . $logs . '</pre>';
+                  return;
+                } ?>
+
                 <?php if (isset($_GET['success']) && $_GET['success'] == 'addPlayer') {
                   echo '<div class="alert alert-success mt-4" role="alert">Joueur ajouté avec succès !</div>';
                 };
@@ -214,6 +223,12 @@
                         <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="null" style="opacity: 0.5; cursor: not-allowed;" id="closeSemesterBtn">
                           <i class="ti ti-calendar-off me-2"></i>
                           Fermer le semestre
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item border-top" href="./panel.php?action=logs">
+                          <i class="ti ti-history-toggle me-2"></i>
+                          Logs
                         </a>
                       </li>
                       <li>
