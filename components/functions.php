@@ -172,8 +172,10 @@ function writeLog($path = null, $message = null)
 
     $maxLines = 999;
 
+    $logFile = $path . 'bdd/logs.txt';
+
     // Read the file
-    $lines = file($path . 'bdd/logs.txt');
+    $lines = file_exists($logFile) ? file($logFile) : [];
 
     if (!empty($lines)) {
         // Remove the last lines if the file has more than $maxLines lines
