@@ -23,7 +23,7 @@ $newSemesterPath = '../bdd/semesters/' . $newSemester;
 
 if (!file_exists($newSemesterPath)) {
     mkdir($newSemesterPath, 0777, true);
-    mkdir($newSemesterPath . '/archives', 0777, true);
+    file_put_contents($newSemesterPath . '/global.json', json_encode([], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 }
 
 $currentData = json_decode(file_get_contents('../bdd/current.json'), true);

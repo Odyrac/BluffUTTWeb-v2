@@ -77,6 +77,10 @@ file_put_contents('../bdd/semesters/' . $semester . '/global.json', $json);
 
 $fileName = date('d-m') . '.json';
 
+if (!file_exists('../bdd/semesters/' . $semester . '/archives')) {
+    mkdir('../bdd/semesters/' . $semester . '/archives', 0777, true);
+}
+
 file_put_contents('../bdd/semesters/' . $semester . '/archives/' . $fileName, $json);
 
 writeLog('../', 'Fermeture de la soirée');

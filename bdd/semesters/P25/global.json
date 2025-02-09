@@ -1,0 +1,14 @@
+[
+    {
+        "firstname": "louis",
+        "lastname": "halley",
+        "money": 10000,
+        "points": 0,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 0,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 0
+    }
+]

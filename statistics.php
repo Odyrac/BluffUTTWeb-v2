@@ -20,7 +20,10 @@
 
       <?php
 
-      $semester = getSemester();
+      $semesters = getSemesters(null, 'withArchives');
+      $semesters = array_reverse($semesters);
+      $semester = $semesters[0];
+
       if (isset($_GET['semester']) && isValidSemester($_GET['semester'], 'withArchives')) {
         $semester = $_GET['semester'];
       }
@@ -61,9 +64,6 @@
 
                       <ul class="dropdown-menu pt-0 pb-0">
                         <?php
-                        $semesters = getSemesters(null, 'withArchives');
-                        $semesters = array_reverse($semesters);
-
                         foreach ($semesters as $sem) {
                           $isCurrentSemester = ($sem === $semester);
                           echo '<li><a class="dropdown-item" href="?semester=' . $sem . '&statisticsType=' . $statisticsType['type'] . '">' . ($isCurrentSemester ? '<i class="ti ti-check me-2"></i>' : '') . 'Semestre ' . $sem . '</a></li>';
