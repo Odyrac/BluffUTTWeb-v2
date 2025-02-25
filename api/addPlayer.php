@@ -10,6 +10,11 @@ if (!isset($_COOKIE['password']) || $_COOKIE['password'] != $passwordGlobal) {
 $firstname = html_entity_decode(strtolower($_POST['firstname']), ENT_QUOTES, 'UTF-8');
 $lastname = html_entity_decode(strtolower($_POST['lastname']), ENT_QUOTES, 'UTF-8');
 
+$firstname = str_replace('"', '', $firstname);
+$firstname = str_replace("'", '', $firstname);
+$lastname = str_replace('"', '', $lastname);
+$lastname = str_replace("'", '', $lastname);
+
 $money = 10000;
 $points = 0;
 $isPlaying = false;
