@@ -37,6 +37,50 @@ function sortPlayersByFirstname($joueurs)
     return $joueurs;
 }
 
+// This function is used to sort the players by whether they are playing or not
+function sortPlayersPlaying($joueurs)
+{
+    $joueurs = sortPlayersByFirstname($joueurs);
+
+    usort($joueurs, function ($a, $b) {
+        // If both players are playing
+        if ($a['isPlaying'] && $b['isPlaying']) {
+            // If both players have already played
+            if ($a['hasAlreadyPlayed'] && $b['hasAlreadyPlayed']) {
+                return strcmp($a['firstname'], $b['firstname']);
+            }
+
+            // If only player A has already played
+            if ($a['hasAlreadyPlayed']) {
+                return 1;
+            }
+
+            // If only player B has already played
+            if ($b['hasAlreadyPlayed']) {
+                return -1;
+            }
+
+            // If none of the players have already played
+            return strcmp($a['firstname'], $b['firstname']);
+        }
+
+        // If only player A plays
+        if ($a['isPlaying']) {
+            return -1;
+        }
+
+        // If only player B plays
+        if ($b['isPlaying']) {
+            return 1;
+        }
+
+        // If none of the players play
+        return strcmp($a['firstname'], $b['firstname']);
+    });
+
+    return $joueurs;
+}
+
 // This function is used to get the name of a player
 function getName($firstname, $lastname)
 {

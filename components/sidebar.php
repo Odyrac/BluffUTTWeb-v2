@@ -41,14 +41,6 @@
                         <span class="hide-menu">Statistiques</span>
                     </a>
                 </li>
-                <!--<li class="sidebar-item">
-                    <a class="sidebar-link" target="_blank" href="./timer/index.html" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-clock"></i>
-                        </span>
-                        <span class="hide-menu">Timer</span>
-                    </a>
-                </li>-->
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                     <span class="hide-menu">Divers</span>
@@ -59,6 +51,14 @@
                             <i class="ti ti-help"></i>
                         </span>
                         <span class="hide-menu">Aide</span>
+                    </a>
+                </li>
+                <li class="sidebar-item <?php if ($page == 'timer') echo 'selected'; ?>">
+                    <a class="sidebar-link <?php if ($page == 'timer') echo 'active'; ?>" href="./timer.php" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-clock"></i>
+                        </span>
+                        <span class="hide-menu">Timer</span>
                     </a>
                 </li>
                 <li class="sidebar-item <?php if ($page == 'panel') echo 'selected'; ?>">

@@ -138,7 +138,7 @@
                     <tbody>
                       <?php
                       if ($players) {
-                        $players = sortPlayersByFirstname($players);
+                        $players = sortPlayersPlaying($players);
                         foreach ($players as $player) {
                           $name = getName($player['firstname'], $player['lastname']);
                       ?>
@@ -149,12 +149,15 @@
                             </td>
                             <td class="border-bottom-0">
                               <?php if ($player['hasAlreadyPlayed'] == true) {
-                                echo '<span class="badge bg-warning rounded-3 ms-2">A déjà joué</span>';
+                                echo '<span class="badge bg-warning rounded-3">A déjà joué</span>';
                               } else {
                                 if ($player['isPlaying'] == true) {
-                                  echo '<span class="badge bg-success rounded-3 ms-2">Joue</span>';
+                                  echo '<span class="badge bg-success rounded-3">Joue</span>';
+                                  if ($player['rebuyCount'] > 0) {
+                                    echo '<span class="badge bg-info rounded-3 ms-2">' . $player['rebuyCount'] . ' <i class="ti ti-pig-money"></i></span>';
+                                  }
                                 } else {
-                                  echo '<span class="badge bg-danger rounded-3 ms-2">Ne joue pas</span>';
+                                  echo '<span class="badge bg-danger rounded-3">Ne joue pas</span>';
                                 }
                               } ?>
                             </td>
