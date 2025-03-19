@@ -29,28 +29,29 @@
 
                 <h5 class="card-title fw-semibold mb-4">Timer</h5>
 
-                <p>Stack : 1,500$ (2x 500$ + 3x 100$ + 2x 50$ + 2x 25$ + 3x 10$ + 4x 5$)</p>
-
-                <button type="submit" class="btn btn-primary" id="poker_play_pause">Play/Pause</button>
-
-                <button type="submit" class="btn btn-primary ms-2" id="poker_next_round">Next Round</button>
-
-                <button type="submit" class="btn btn-danger ms-2 reset">Reset</button>
+                <p>Stack de départ : 1,500$ (2x 500$ + 3x 100$ + 2x 50$ + 2x 25$ + 3x 10$ + 4x 5$)</p>
 
                 <div class="mt-5 border rounded p-4 d-flex justify-content-between align-items-center">
 
-                  <h2 id="round">Round 1</h2>
-                  <h1 class="clock">15:00</h1>
+                  <h2 id="round" class="mb-0">Round 1</h2>
+                  <h1 class="clock mb-0">15:00</h1>
 
                   <div id="poker_blinds">
-                    <div class="blinds">
-                      <h2>
+                    <div class="blinds text-center">
+                      <small>Blinds</small>
+                      <h2 class="mb-0">
                         <span class="small-blind">5</span>
                         <span class="separator">/</span>
                         <span class="big-blind">10</span>
                       </h2>
                     </div>
                   </div>
+                </div>
+
+                <div class="mt-3 d-flex justify-content-center">
+                  <button type="submit" class="btn btn-success" id="poker_play_pause">Play</button>
+                  <button type="submit" class="btn btn-primary ms-2" id="poker_next_round">Next Round</button>
+                  <button type="submit" class="btn btn-danger ms-2 reset">Reset</button>
                 </div>
 
                 <audio id="alarm" controls="controls" style="display:none">
@@ -214,14 +215,16 @@
           }
         },
         updatePlayPauseButton: function() {
-          var pause_play_button = $('#poker_play_pause a');
+          var pause_play_button = $('#poker_play_pause');
 
           if (this.isGamePaused()) {
-            pause_play_button.removeClass('pause');
-            pause_play_button.addClass('play');
+            pause_play_button.removeClass('btn-warning');
+            pause_play_button.addClass('btn-success');
+            pause_play_button.html('Play');
           } else {
-            pause_play_button.removeClass('play');
-            pause_play_button.addClass('pause');
+            pause_play_button.removeClass('btn-success');
+            pause_play_button.addClass('btn-warning');
+            pause_play_button.html('Pause');
           }
         },
         updateRound: function(round) {
@@ -258,6 +261,9 @@
 
 
     $('.reset').on('click', function(event) {
+      if (!confirm('Voulez-vous vraiment réinitialiser le timer ?')) {
+        return false;
+      }
       Poker.reset();
     });
   </script>

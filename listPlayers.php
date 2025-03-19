@@ -47,6 +47,7 @@
                           <h6 class="fw-semibold mb-0">
                             <?php if ($_GET['action'] == 'exitPlayers') echo 'Argent sur la table'; ?>
                             <?php if ($_GET['action'] == 'pickTables') echo 'Table'; ?>
+                            <?php if ($_GET['action'] == 'alterData') echo 'Modification'; ?>
                         </th>
                       </tr>
                     </thead>
@@ -83,6 +84,14 @@
                           }
                         }
 
+                        if ($_GET['action'] == 'alterData') {
+                          echo '<form action="./api/alterData.php" method="post">';
+                          echo '<select class="form-select mb-4" name="type" required>
+                                  <option value="money">Modifier l\'argent</option>
+                                  <option value="points">Modifier les points</option>
+                                </select>';
+                        }
+
                         foreach ($players as $player) {
                           $name = getName($player['firstname'], $player['lastname']);
                       ?>
@@ -92,6 +101,8 @@
                             </td>
                             <td class="border-bottom-0">
                               <?php if ($_GET['action'] == 'exitPlayers') echo '<input class="form-control" type="number" name="' . $player['id'] . '" placeholder="Jetons rendus">' ?>
+
+                              <?php if ($_GET['action'] == 'alterData') echo '<input class="form-control" type="number" name="' . $player['id'] . '" placeholder="Exemple : 100, -100, 4, ...">' ?>
 
                               <?php if ($_GET['action'] == 'pickTables') {
                                 $table = array_rand(array_filter($tables, function ($table) {
@@ -125,7 +136,7 @@
           </div>
 
           <?php
-          if ($_GET['action'] == 'exitPlayers') { ?>
+          if ($_GET['action'] == 'exitPlayers' || $_GET['action'] == 'alterData') { ?>
             <div class="col-lg-4 d-flex align-items-stretch fixed-bottom ps-0 pe-0 pe-lg-3" style="left: auto; right: 0;">
               <div class="card w-100 mb-0 mb-lg-4">
                 <div class="card-body p-4">

@@ -119,6 +119,10 @@
 
                 if (isset($_GET['success']) && $_GET['success'] == 'closeSemester') {
                   echo '<div class="alert alert-success mt-4" role="alert">Le semestre a été fermé avec succès !</div>';
+                };
+
+                if (isset($_GET['success']) && $_GET['success'] == 'alterData') {
+                  echo '<div class="alert alert-success mt-4" role="alert">Données altérées avec succès !</div>';
                 }; ?>
 
                 <div class="table-responsive">
@@ -232,6 +236,12 @@
                         <a class="dropdown-item border-top" href="./panel.php?action=logs">
                           <i class="ti ti-history-toggle me-2"></i>
                           Logs
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./listPlayers.php?action=alterData">
+                          <i class="ti ti-database me-2"></i>
+                          Altérer les données
                         </a>
                       </li>
                       <li>
