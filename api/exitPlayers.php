@@ -35,6 +35,10 @@ foreach ($_POST as $key => $value) {
             die('Player with ID ' . $playerId . ' has already played');
         }
 
+        if ($money < 0) {
+            die('Money cannot be negative');
+        }
+
         // Modifier le joueur directement dans le tableau
         $players[$playerIndex]['money'] += $money;
         $players[$playerIndex]['hasAlreadyPlayed'] = true;

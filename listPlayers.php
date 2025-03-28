@@ -102,7 +102,7 @@
                             <td class="border-bottom-0">
                               <?php if ($_GET['action'] == 'exitPlayers') echo '<input class="form-control" type="number" name="' . $player['id'] . '" placeholder="Jetons rendus">' ?>
 
-                              <?php if ($_GET['action'] == 'alterData') echo '<input class="form-control" type="number" name="' . $player['id'] . '" placeholder="100, -100, 4, ...">' ?>
+                              <?php if ($_GET['action'] == 'alterData') echo '<input class="form-control" type="text" name="' . $player['id'] . '" placeholder="100, -100, 4, ..." inputmode="numeric">' ?>
 
                               <?php if ($_GET['action'] == 'pickTables') {
                                 $table = array_rand(array_filter($tables, function ($table) {
