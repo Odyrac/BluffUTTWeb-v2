@@ -1,63 +1,39 @@
 [
     {
-        "firstname": "yann",
-        "lastname": "coubel",
-        "money": 21110,
-        "points": 134,
+        "firstname": "corentin",
+        "lastname": "lenotre",
+        "money": 2675,
+        "points": 53,
         "lastGain": 0,
         "isPlaying": false,
         "presenceCount": 6,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
-        "id": 2
+        "id": 5
     },
     {
         "firstname": "louis",
         "lastname": "halley",
-        "money": 15730,
-        "points": 149,
+        "money": 15885,
+        "points": 131,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 7,
+        "presenceCount": 6,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 0
     },
     {
-        "firstname": "kyoma",
-        "lastname": "grandjean",
-        "money": 12025,
-        "points": 92,
-        "lastGain": 0,
-        "isPlaying": false,
-        "presenceCount": 6,
-        "rebuyCount": 0,
-        "hasAlreadyPlayed": false,
-        "id": 10
-    },
-    {
         "firstname": "tristan",
         "lastname": "crémonat",
-        "money": 9240,
-        "points": 27,
+        "money": 10005,
+        "points": 15,
         "lastGain": 0,
         "isPlaying": false,
-        "presenceCount": 2,
+        "presenceCount": 1,
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 16
-    },
-    {
-        "firstname": "corentin",
-        "lastname": "lenotre",
-        "money": 1320,
-        "points": 63,
-        "lastGain": 0,
-        "isPlaying": false,
-        "presenceCount": 7,
-        "rebuyCount": 0,
-        "hasAlreadyPlayed": false,
-        "id": 5
     },
     {
         "firstname": "leeloo",
@@ -70,6 +46,18 @@
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 8
+    },
+    {
+        "firstname": "kyoma",
+        "lastname": "grandjean",
+        "money": 12220,
+        "points": 77,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 5,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 10
     },
     {
         "firstname": "simon",
@@ -106,6 +94,18 @@
         "rebuyCount": 0,
         "hasAlreadyPlayed": false,
         "id": 13
+    },
+    {
+        "firstname": "yann",
+        "lastname": "coubel",
+        "money": 18640,
+        "points": 109,
+        "lastGain": 0,
+        "isPlaying": false,
+        "presenceCount": 5,
+        "rebuyCount": 0,
+        "hasAlreadyPlayed": false,
+        "id": 2
     },
     {
         "firstname": "valentin",
